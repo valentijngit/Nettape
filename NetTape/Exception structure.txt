@@ -1,0 +1,33 @@
+SENDBACKUP
+
+CLIENT
+
+Exception -> 		logincommand (clientcommand) ! say something to user in a messagebox
+			logincommand (reconnect) ! say something to user in dobackupwindow
+
+IOException -> 		Sendcommand ! - close socket - try to reconnect - OK
+	       		SendInt ! - close socket - try to reconnect - OK
+			receiveInt ! - close socket - try to reconnect - OK
+
+EOFException ->		receiveInt ! - close socket - try to reconnect - OK
+
+	per item
+	
+	Exception ->	new FileHandler - OK
+			filehandler.closeShadow - OK
+			fileHandler.closeShadow - OK
+			getsocket.close ! (server keeps waiting)
+			FileHandler.openFile - OK
+			filehandler.closeFile - OK
+			sendFile - handled as socketException in SENDBACKUP - OK
+			receiveChecksums - handled as socketException in SENDBACKUP - OK
+			makeDeltas - handled as socketException in SENDBACKUP - OK
+
+
+	IOException -> 	sendInt - handled in SENDBACKUP - OK
+		    	receiveObject - handled in SENDBACKUP - OK
+			sendObject - handled in SENDBACKUP - OK
+
+	EOFException -> receiveObject - handled in SENDBACKUP - OK
+
+	other exceptions are handled by handlers above.

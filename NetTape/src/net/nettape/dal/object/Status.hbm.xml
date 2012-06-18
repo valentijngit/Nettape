@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Status" table="status" schema="public">
+        <id name="statusid" type="int">
+            <column name="statusid" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <set name="restores" table="restore" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="statusid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Restore" />
+        </set>
+        <set name="backups" table="backup" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="statusid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backup" />
+        </set>
+        <set name="backups_1" table="backup" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="statusid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backup" />
+        </set>
+        <set name="restores_1" table="restore" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="statusid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Restore" />
+        </set>
+        <set name="restoreitems" table="restoreitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="statusid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Restoreitem" />
+        </set>
+        <set name="restoreitems_1" table="restoreitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="statusid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Restoreitem" />
+        </set>
+    </class>
+</hibernate-mapping>

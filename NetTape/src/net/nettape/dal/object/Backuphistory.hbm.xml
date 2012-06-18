@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Backuphistory" table="backuphistory" schema="public">
+        <composite-id name="id" class="net.nettape.dal.object.BackuphistoryId">
+            <key-property name="path" type="string">
+                <column name="path" />
+            </key-property>
+            <key-property name="backupsetid" type="int">
+                <column name="backupsetid" />
+            </key-property>
+        </composite-id>
+        <property name="backupid" type="java.lang.Integer">
+            <column name="backupid" />
+        </property>
+        <property name="location" type="java.lang.Long">
+            <column name="location" />
+        </property>
+        <property name="length" type="java.lang.Long">
+            <column name="length" />
+        </property>
+    </class>
+</hibernate-mapping>

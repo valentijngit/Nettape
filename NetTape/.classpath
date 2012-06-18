@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="assets/" kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/hibernate3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/javassist-3.9.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/slf4j-jdk14-1.5.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/postgresql-8.4-701.jdbc3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/swt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/bcprov-jdk15-145.jar"/>
+	<classpathentry kind="lib" path="required/shadowcopyconsole"/>
+	<classpathentry kind="lib" path="C:/Users/Valentijn/workspace/NetTape/required/jxfilewatcher-1.0.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7-32bit"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.User" table="user_" schema="public">
+        <id name="userid" type="java.lang.Integer">
+            <column name="userid" />
+            <generator class="sequence">
+                <param name="sequence">user__userid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="server" class="net.nettape.dal.object.Server" fetch="select">
+            <column name="serverid" />
+        </many-to-one>
+        <property name="username" type="string">
+            <column name="username" length="20" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="20" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <property name="firstname" type="string">
+            <column name="firstname" length="50" />
+        </property>
+        <property name="datecreated" type="timestamp">
+            <column name="datecreated" length="29" />
+        </property>
+        <property name="datedeleted" type="timestamp">
+            <column name="datedeleted" length="29" />
+        </property>
+        <property name="datedeactivated" type="timestamp">
+            <column name="datedeactivated" length="29" />
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active" />
+        </property>
+        <property name="deleted" type="java.lang.Boolean">
+            <column name="deleted" />
+        </property>
+        <property name="quota" type="java.lang.Long">
+            <column name="quota" />
+        </property>
+        <property name="bandwidth" type="java.lang.Long">
+            <column name="bandwidth" />
+        </property>
+        <property name="languageid" type="java.lang.Integer">
+            <column name="languageid" />
+        </property>
+        <property name="timezone" type="string">
+            <column name="timezone" length="250" />
+        </property>
+        <property name="notes" type="string">
+            <column name="notes" />
+        </property>
+        <property name="backupclient" type="java.lang.Short">
+            <column name="backupclient" />
+        </property>
+        <property name="freetrial" type="java.lang.Boolean">
+            <column name="freetrial" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="250" />
+        </property>
+        <property name="type" type="java.lang.Short">
+            <column name="type" />
+        </property>
+        <property name="datetodeactivate" type="date">
+            <column name="datetodeactivate" length="13" />
+        </property>
+        <property name="maxclients" type="java.lang.Integer">
+            <column name="maxclients" />
+        </property>
+        <property name="ftmailboxes" type="java.lang.Integer">
+            <column name="ftmailboxes" />
+        </property>
+        <set name="reluserAdgroups" table="reluser_adgroup" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.ReluserAdgroup" />
+        </set>
+        <set name="clients" table="client" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Client" />
+        </set>
+        <set name="reluserModules" table="reluser_module" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.ReluserModule" />
+        </set>
+        <set name="clients_1" table="client" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Client" />
+        </set>
+        <set name="storageusages" table="storageusage" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" not-null="true" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Storageusage" />
+        </set>
+        <set name="reluserModules_1" table="reluser_module" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.ReluserModule" />
+        </set>
+        <set name="reluserAdgroups_1" table="reluser_adgroup" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.ReluserAdgroup" />
+        </set>
+        <set name="storageusages_1" table="storageusage" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" not-null="true" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Storageusage" />
+        </set>
+        <set name="contacts" table="contact" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Contact" />
+        </set>
+        <set name="contacts_1" table="contact" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Contact" />
+        </set>
+    </class>
+</hibernate-mapping>

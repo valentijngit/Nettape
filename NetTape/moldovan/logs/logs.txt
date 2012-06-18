@@ -1,0 +1,40 @@
+INFO  [16:32:47,312] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Tue Sep 28 16:32:47 CEST 2010
+FATAL [16:32:48,484] [net.nettape.client.gui.Main.main(Main.java:95)] - java.lang.UnsatisfiedLinkError: Cannot load 64-bit SWT libraries on 32-bit JVM
+java.lang.UnsatisfiedLinkError: Cannot load 64-bit SWT libraries on 32-bit JVM
+	at org.eclipse.swt.internal.Library.loadLibrary(Unknown Source)
+	at org.eclipse.swt.internal.Library.loadLibrary(Unknown Source)
+	at org.eclipse.swt.internal.C.<clinit>(Unknown Source)
+	at org.eclipse.swt.widgets.Display.<clinit>(Unknown Source)
+	at net.nettape.client.gui.Main.main(Main.java:90)
+INFO  [16:36:10,437] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Tue Sep 28 16:36:10 CEST 2010
+FATAL [16:36:10,750] [net.nettape.client.gui.Main.main(Main.java:95)] - java.lang.UnsatisfiedLinkError: Cannot load 64-bit SWT libraries on 32-bit JVM
+java.lang.UnsatisfiedLinkError: Cannot load 64-bit SWT libraries on 32-bit JVM
+	at org.eclipse.swt.internal.Library.loadLibrary(Unknown Source)
+	at org.eclipse.swt.internal.Library.loadLibrary(Unknown Source)
+	at org.eclipse.swt.internal.C.<clinit>(Unknown Source)
+	at org.eclipse.swt.widgets.Display.<clinit>(Unknown Source)
+	at net.nettape.client.gui.Main.main(Main.java:90)
+INFO  [17:03:04,437] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Tue Sep 28 17:03:04 CEST 2010
+FATAL [17:03:04,718] [net.nettape.client.gui.Main.main(Main.java:95)] - java.lang.UnsatisfiedLinkError: Cannot load 64-bit SWT libraries on 32-bit JVM
+java.lang.UnsatisfiedLinkError: Cannot load 64-bit SWT libraries on 32-bit JVM
+	at org.eclipse.swt.internal.Library.loadLibrary(Unknown Source)
+	at org.eclipse.swt.internal.Library.loadLibrary(Unknown Source)
+	at org.eclipse.swt.internal.C.<clinit>(Unknown Source)
+	at org.eclipse.swt.widgets.Display.<clinit>(Unknown Source)
+	at net.nettape.client.gui.Main.main(Main.java:90)
+INFO  [17:04:32,218] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Tue Sep 28 17:04:32 CEST 2010
+FATAL [17:04:32,296] [net.nettape.client.gui.Main.main(Main.java:95)] - java.lang.UnsatisfiedLinkError: Cannot load 64-bit SWT libraries on 32-bit JVM
+java.lang.UnsatisfiedLinkError: Cannot load 64-bit SWT libraries on 32-bit JVM
+	at org.eclipse.swt.internal.Library.loadLibrary(Unknown Source)
+	at org.eclipse.swt.internal.Library.loadLibrary(Unknown Source)
+	at org.eclipse.swt.internal.C.<clinit>(Unknown Source)
+	at org.eclipse.swt.widgets.Display.<clinit>(Unknown Source)
+	at net.nettape.client.gui.Main.main(Main.java:90)
+INFO  [17:05:29,125] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Tue Sep 28 17:05:29 CEST 2010
+INFO  [17:07:38,640] [net.nettape.client.gui.admin.LoggerSetings.shutDown(LoggerSetings.java:72)] - STOP APPLICATION - Tue Sep 28 17:07:38 CEST 2010
+INFO  [17:08:29,578] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Tue Sep 28 17:08:29 CEST 2010
+INFO  [17:08:35,046] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Tue Sep 28 17:08:35 CEST 2010
+INFO  [17:09:10,828] [net.nettape.client.gui.admin.LoggerSetings.shutDown(LoggerSetings.java:72)] - STOP APPLICATION - Tue Sep 28 17:09:10 CEST 2010
+INFO  [17:09:11,906] [net.nettape.client.gui.admin.LoggerSetings.shutDown(LoggerSetings.java:72)] - STOP APPLICATION - Tue Sep 28 17:09:11 CEST 2010
+INFO  [17:22:04,828] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Tue Sep 28 17:22:04 CEST 2010
+INFO  [17:22:16,812] [net.nettape.client.gui.admin.LoggerSetings.shutDown(LoggerSetings.java:72)] - STOP APPLICATION - Tue Sep 28 17:22:16 CEST 2010

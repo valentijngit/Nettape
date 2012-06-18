@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Storageusage" table="storageusage" schema="public">
+        <id name="storageusageid" type="java.lang.Integer">
+            <column name="storageusageid" />
+            <generator class="sequence">
+                <param name="sequence">storageusage_storageusageid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="user" class="net.nettape.dal.object.User" fetch="select">
+            <column name="userid" not-null="true" />
+        </many-to-one>
+        <property name="date" type="date">
+            <column name="date" length="13" />
+        </property>
+        <property name="data" type="java.lang.Integer">
+            <column name="data" />
+        </property>
+        <property name="uploaded" type="java.lang.Integer">
+            <column name="uploaded" />
+        </property>
+    </class>
+</hibernate-mapping>

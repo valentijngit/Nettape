@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Jobsettings" table="jobsettings" schema="public">
+        <id name="jobsettingsid" type="java.lang.Integer">
+            <column name="jobsettingsid" />
+            <generator class="sequence">
+                <param name="sequence">jobsettings_jobsettingsid_seq</param>
+            </generator>
+        </id>
+        <property name="backupreport" type="java.lang.Boolean">
+            <column name="backupreport" />
+        </property>
+        <property name="restorereport" type="java.lang.Boolean">
+            <column name="restorereport" />
+        </property>
+        <property name="settingchangereport" type="java.lang.Boolean">
+            <column name="settingchangereport" />
+        </property>
+        <property name="missedbackupreport" type="java.lang.Boolean">
+            <column name="missedbackupreport" />
+        </property>
+        <property name="inactiveuserreport" type="java.lang.Boolean">
+            <column name="inactiveuserreport" />
+        </property>
+        <property name="inactiveuserreportdays" type="java.lang.Long">
+            <column name="inactiveuserreportdays" />
+        </property>
+        <property name="offlinebackupreminder" type="java.lang.Boolean">
+            <column name="offlinebackupreminder" />
+        </property>
+        <property name="inactiveuserreporttime" type="time">
+            <column name="inactiveuserreporttime" length="21" />
+        </property>
+        <property name="offlinebackupreminderdays" type="java.lang.Long">
+            <column name="offlinebackupreminderdays" />
+        </property>
+        <property name="offlinebackupremindertime" type="time">
+            <column name="offlinebackupremindertime" length="21" />
+        </property>
+        <property name="backupquotareminder" type="java.lang.Boolean">
+            <column name="backupquotareminder" />
+        </property>
+        <property name="backupquotareminderdays" type="java.lang.Long">
+            <column name="backupquotareminderdays" />
+        </property>
+        <property name="backupquotaremindertime" type="time">
+            <column name="backupquotaremindertime" length="21" />
+        </property>
+        <property name="backupquotareminderpercentage" type="java.lang.Integer">
+            <column name="backupquotareminderpercentage" />
+        </property>
+        <property name="trialuserreminder" type="java.lang.Boolean">
+            <column name="trialuserreminder" />
+        </property>
+        <property name="trialuserreminderdays" type="java.lang.Long">
+            <column name="trialuserreminderdays" />
+        </property>
+        <property name="trialuserremindertime" type="time">
+            <column name="trialuserremindertime" length="21" />
+        </property>
+        <property name="trialuserreminderdaysafterregistration" type="java.lang.Integer">
+            <column name="trialuserreminderdaysafterregistration" />
+        </property>
+        <property name="usagereport" type="java.lang.Boolean">
+            <column name="usagereport" />
+        </property>
+        <property name="usagereportdays" type="java.lang.Long">
+            <column name="usagereportdays" />
+        </property>
+        <property name="usagereporttime" type="time">
+            <column name="usagereporttime" length="21" />
+        </property>
+        <property name="errorreport" type="java.lang.Boolean">
+            <column name="errorreport" />
+        </property>
+        <property name="errorreportdays" type="java.lang.Long">
+            <column name="errorreportdays" />
+        </property>
+        <property name="errorreporttime" type="time">
+            <column name="errorreporttime" length="21" />
+        </property>
+        <property name="inactiveuserremoval" type="java.lang.Boolean">
+            <column name="inactiveuserremoval" />
+        </property>
+        <property name="inactiveuserremovaldays" type="java.lang.Long">
+            <column name="inactiveuserremovaldays" />
+        </property>
+        <property name="inactiveuserremovaltime" type="time">
+            <column name="inactiveuserremovaltime" length="21" />
+        </property>
+        <property name="retentionpolicyjob" type="java.lang.Boolean">
+            <column name="retentionpolicyjob" />
+        </property>
+        <property name="retentionpolicyjobdays" type="java.lang.Long">
+            <column name="retentionpolicyjobdays" />
+        </property>
+        <property name="retentionpolicyjobtime" type="time">
+            <column name="retentionpolicyjobtime" length="21" />
+        </property>
+        <property name="systemlogremoval" type="java.lang.Boolean">
+            <column name="systemlogremoval" />
+        </property>
+        <property name="systemlogremovaldays" type="java.lang.Long">
+            <column name="systemlogremovaldays" />
+        </property>
+        <property name="systemlogremovaltime" type="time">
+            <column name="systemlogremovaltime" length="21" />
+        </property>
+        <property name="debuglogremoval" type="java.lang.Boolean">
+            <column name="debuglogremoval" />
+        </property>
+        <property name="debuglogremovaldays" type="java.lang.Long">
+            <column name="debuglogremovaldays" />
+        </property>
+        <property name="debuglogremovaltime" type="time">
+            <column name="debuglogremovaltime" length="21" />
+        </property>
+    </class>
+</hibernate-mapping>

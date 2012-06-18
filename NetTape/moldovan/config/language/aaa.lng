@@ -1,0 +1,143 @@
+[BackUpFilterWindow]
+comboApplyTo=Apply to
+comboOption1=include files with the above characteristic(s)
+comboOption2=exclude files with the above characteristic(s)
+groupFileNameExtension=File name extension
+messageBoxTextIllegalCharacter=You can not use illegal characters.
+messageBoxTextOneDot=Pattern must have at least one [.].
+messageBoxTextOneFilter=You must enter at least one filter.
+messageBoxTextPaternEmpty=You must enter at least one pattern.
+messageBoxTextPathDuplicate=This path already exist in list.
+messageBoxTextPathNotExist=The path does not exist.
+messageBoxTextPatternDuplicate=This pattern already exist in list.
+title=Backup filters
+[BackUpSourceWindow]
+buttonAdvanced=Advanced
+title=Backup Source
+[BackupScheduleWindow]
+buttonAfter=after
+buttonFriday=Friday
+buttonMonday=Monday
+buttonOnCompletion=on completion (Full Backup)
+buttonRunSchedule=Run scheduled backup on this computer
+buttonSaturday=Saturday
+buttonSunday=Sunday
+buttonThursday=Thursday
+buttonTuesday=Tuesday
+buttonWednesday=Wednesday
+groupTime=Time
+labelBackup=Backup on the following day(s) every week
+labelHours=hour(s)
+labelStart=Start
+labelStop=Stop
+title=Backup Schedule
+[BackupSettingsWindow]
+buttonBackupFile=Backup File Permision
+buttonChange=Change
+buttonMaskEncryptingKey=Mask encrypting key
+comboRecycleBin=Keep deleted file(s) for
+groupAdvanceSettings=Advanced Settings
+groupEncryption=Encryption
+groupLanguage=Language
+groupRecycleBin=Recycle Bin
+groupTemporaryFile=Temporary Directory for storing backup files
+recycleBinDays=day(s)
+textEncryptingKey=Encrypting key
+title=Backup Settings
+[ChangePathWindow]
+title=Change Path
+[FilesWindow]
+comboItems=Items per page
+comboPage=Page
+table.Modified=Modified
+table.Name=Name
+table.Size=Size
+table.Type=Type
+[General]
+buttonCancel=Cancel
+buttonNO=NO
+buttonOk=OK
+buttonYES=YES
+messageError=ERROR
+messageInfo=INFO
+messageQuestion=QUESTION
+messageWaiting=WAITING
+messageWarning=WARNING
+[LanguageWindow]
+languageName=Language name
+languageNameEmpty=Language name can not be empty.
+textEmpty=All texts must be completed.
+title=Select folders and files
+[MainWindow]
+buttonBackup=Backup
+buttonBackupSet=Backup Set
+buttonHelp=Help
+buttonReports=Reports
+buttonRestore=Restore
+buttonSchedule=Schedule
+buttonSettings=Settings
+buttonUserAccount=User account
+title=Backup and Restore
+[RestoreFilterCriteriaWindow]
+buttonMatchCase=Match case
+comboType=Type
+ends with=ends with
+exact=exact
+groupPattern=Filter
+messageBoxTextIllegalCharacter=You can not use illegal characters.
+messageBoxTextOneDot=Pattern must have at least one [.].
+messageBoxTextPatternEmpty=Pattern can not be empty.
+start with=start with
+textPattern=Pattern
+title=Filter
+[RestoreFilterWindow]
+groupFileNameExtension=File name extension
+title=Restore filters
+[RestoreWindow]
+buttonAlternativeLocation=Alternativ location
+buttonChange=Change
+buttonDeleteExtraFiles=Delete extra files222
+buttonFilter=Filter
+buttonOriginalLocation=Original location
+buttonRestoreFile=Restore file permision
+buttonSearch=Search
+buttonShowAllFiles=Show all files
+buttonShowFiles=Show files as of jobs
+groupRestore=Restore file to
+labelOriginalLocation=Original location
+title=Restore
+[SearchWindow]
+buttonChange=Change
+buttonMatchCase=Match case
+buttonSearch=Search
+buttonSearchSubFolders=Search subfolders
+buttonStop=Stop
+comboApplyTo=Apply to
+comboApplyToDirectories=directories only
+comboApplyToFileAndDirectory=files and directories
+comboApplyToFiles=files only
+comboType=Type
+comboTypeContains=contains
+comboTypeEndWith=ends with
+comboTypeExact=exact
+comboTypeStartWith=starts with
+messageBoxTextIllegalCharacter=You can not use illegal characters.
+messageBoxTextOneDot=Pattern must have at least one [.].
+textLookIn=Look in
+textPattern=Pattern
+title=Search
+[SelectDirectoryFilterWindow]
+title=Select directory
+[SettingsWindow]
+title=Application Setings
+[UserProfileWindow]
+buttonChange=Change
+buttonSavePassword=Save password
+groupContact=Contact
+groupTimeZone=Time Zone
+groupUserInformation=User Information
+textEmail=Email
+textLoginName=Login Name
+textName=Name
+textPassword=Password
+title=User profile

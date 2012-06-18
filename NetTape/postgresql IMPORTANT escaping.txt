@@ -1,0 +1,3 @@
+
+ALTER USER username SET standard_conforming_strings = true;
+SET standard_conforming_strings TO on;

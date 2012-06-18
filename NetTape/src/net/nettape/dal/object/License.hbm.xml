@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.License" table="license" schema="public">
+        <id name="licenseid" type="java.lang.Integer">
+            <column name="licenseid" />
+            <generator class="sequence">
+                <param name="sequence">license_licenseid_seq</param>
+            </generator>
+        </id>
+        <property name="licenseename" type="string">
+            <column name="licenseename" length="250" />
+        </property>
+        <property name="licensekey" type="string">
+            <column name="licensekey" length="50" />
+        </property>
+        <property name="companyname" type="string">
+            <column name="companyname" length="50" />
+        </property>
+        <property name="contactname" type="string">
+            <column name="contactname" length="50" />
+        </property>
+        <property name="contactphone" type="string">
+            <column name="contactphone" length="20" />
+        </property>
+        <property name="ebcclientquota" type="java.lang.Integer">
+            <column name="ebcclientquota" />
+        </property>
+        <property name="bbcclientquota" type="java.lang.Integer">
+            <column name="bbcclientquota" />
+        </property>
+        <property name="exchangeserverquota" type="java.lang.Integer">
+            <column name="exchangeserverquota" />
+        </property>
+        <property name="exchangemailboxquota" type="java.lang.Integer">
+            <column name="exchangemailboxquota" />
+        </property>
+        <property name="sqlserverquota" type="java.lang.Integer">
+            <column name="sqlserverquota" />
+        </property>
+        <property name="oraclequota" type="java.lang.Integer">
+            <column name="oraclequota" />
+        </property>
+        <property name="mysqlquota" type="java.lang.Integer">
+            <column name="mysqlquota" />
+        </property>
+        <property name="lotusdominoquota" type="java.lang.Integer">
+            <column name="lotusdominoquota" />
+        </property>
+        <property name="lotusnotesquota" type="java.lang.Integer">
+            <column name="lotusnotesquota" />
+        </property>
+        <property name="infiledeltaquota" type="java.lang.Integer">
+            <column name="infiledeltaquota" />
+        </property>
+        <property name="volumshadowcopyquota" type="java.lang.Integer">
+            <column name="volumshadowcopyquota" />
+        </property>
+        <property name="bosreplicationmodule" type="java.lang.Boolean">
+            <column name="bosreplicationmodule" />
+        </property>
+        <property name="expirydate" type="date">
+            <column name="expirydate" length="13" />
+        </property>
+        <property name="freeupgradeuntil" type="date">
+            <column name="freeupgradeuntil" length="13" />
+        </property>
+    </class>
+</hibernate-mapping>

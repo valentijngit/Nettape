@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Schedule" table="schedule" schema="public">
+        <id name="scheduleid" type="java.lang.Integer">
+            <column name="scheduleid" />
+            <generator class="sequence">
+                <param name="sequence">schedule_scheduleid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="backupset" class="net.nettape.dal.object.Backupset" fetch="select">
+            <column name="backupsetid" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <property name="daysofweek" type="java.lang.Long">
+            <column name="daysofweek" />
+        </property>
+        <property name="length" type="java.lang.Integer">
+            <column name="length" />
+        </property>
+        <property name="time" type="time">
+            <column name="time" length="15" />
+        </property>
+        <property name="datetype" type="java.lang.Integer">
+            <column name="datetype" />
+        </property>
+        <property name="day" type="java.lang.Integer">
+            <column name="day" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13" />
+        </property>
+        <property name="running" type="java.lang.Boolean">
+            <column name="running" />
+        </property>
+        <property name="lastruntime" type="time">
+            <column name="lastruntime" length="15" />
+        </property>
+        <property name="lastrundate" type="date">
+            <column name="lastrundate" length="13" />
+        </property>
+    </class>
+</hibernate-mapping>

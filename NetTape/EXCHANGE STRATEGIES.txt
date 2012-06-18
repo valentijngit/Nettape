@@ -1,0 +1,18 @@
+Windows 2008    - Exchange 2007
+		- Exchange 2010 
+
+http://theessentialexchange.com/blogs/michael/archive/2009/01/26/exchange-2007-and-windows-2008-online-exchange-backup-part-6-of-7.aspx
+
+Windows 2008	- Exchange 2003
+
+http://theessentialexchange.com/blogs/michael/archive/2009/01/26/exchange-2007-and-windows-2008-online-exchange-backup-part-6-of-7.aspx
+COMBINED with 	BETEST found at:
+
+http://msdn.microsoft.com/en-us/library/bb530721(VS.85).aspx
+
+Windows 2003	- Exchange 2003 -> storage groups are in Active Directory
+		- Exchange 2007 -> cmdlet through powershell (powershell should be installed as extra)
+		- Exchange 2010 -> cmdlet through powershell (powershell should be installed as extra)
+
+BETEST (old version, not with XML)  look at:
+http://msexchangeteam.com/archive/2008/08/25/449684.aspx

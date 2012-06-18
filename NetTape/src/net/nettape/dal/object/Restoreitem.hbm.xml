@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Restoreitem" table="restoreitem" schema="public">
+        <id name="restoreitemid" type="java.lang.Integer">
+            <column name="restoreitemid" />
+            <generator class="sequence">
+                <param name="sequence">restoreitem_restoreitemid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="status" class="net.nettape.dal.object.Status" fetch="select">
+            <column name="statusid" />
+        </many-to-one>
+        <many-to-one name="backupitem" class="net.nettape.dal.object.Backupitem" fetch="select">
+            <column name="backupitemid" />
+        </many-to-one>
+        <many-to-one name="restore" class="net.nettape.dal.object.Restore" fetch="select">
+            <column name="restoreid" />
+        </many-to-one>
+        <property name="path" type="string">
+            <column name="path" />
+        </property>
+        <property name="type" type="java.lang.Short">
+            <column name="type" />
+        </property>
+        <property name="datetime" type="timestamp">
+            <column name="datetime" length="29" />
+        </property>
+        <property name="backupid" type="java.lang.Integer">
+            <column name="backupid" />
+        </property>
+    </class>
+</hibernate-mapping>

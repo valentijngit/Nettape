@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Backupcommand" table="backupcommand" schema="public">
+        <id name="backupcommandid" type="java.lang.Integer">
+            <column name="backupcommandid" />
+            <generator class="sequence">
+                <param name="sequence">backupcommand_backupcommandid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="backupset" class="net.nettape.dal.object.Backupset" fetch="select">
+            <column name="backupsetid" not-null="true" />
+        </many-to-one>
+        <property name="type" type="java.lang.Boolean">
+            <column name="type" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <property name="command" type="string">
+            <column name="command" />
+        </property>
+        <property name="workingfolder" type="string">
+            <column name="workingfolder" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+Eclipse] Access restriction: Class is not accessible due to restriction on required library
+Article By Kamal Mettananda on September 09, 2008 
+"Access restriction: Class is not accessible due to restriction on required library"; error message may be shown while developing Java projects in Eclipse IDE. Error message is self-explanatory, some classes can not be loaded into the project since restriction rules are being imposed on those classes.
+
+
+How to solve
+This error message can be removed by changing a setting inside Eclipse IDE. Open up the dialog box shown below, using any of the following paths.
+
+Windows -> Preferences -> Java -> Compiler -> Errors/Warnings
+(Project) Properties -> Java Compiler -> Errors/Warnings
+Locate the "Forbidden reference (access rules)" option under "Deprecated and restricted API" section in the dialog box. This option decides how to handle access rules defined inside Eclipse. By default it is set to "Error" which causes Eclipse to complain about references to any restricted classes. Choosing any other option (Warning or Ignore) will remove these error messages.
+
+"Warning" or "Ignore" options will only hide the potential issue in the project, by allowing the project to use any classes ignoring predefined access rules. To completely resolve this issue, analyze the project and located the use of restricted classes and take necessary actions (either remove those references or access rules).
+

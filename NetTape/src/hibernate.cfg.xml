@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.password">allal123</property>
+        <property name="hibernate.connection.url">jdbc:postgresql:nettape</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <mapping resource="net/nettape/dal/object/Contact.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Backupcommand.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Backup.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/License.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Adgroup.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Client.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Backuphistory.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/ReluserAdgroup.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Advertisement.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Status.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Retentionschedule.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Backupsetitem.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Jobsettings.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Longname.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Trialmodulesettings.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Criteria.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Filter.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Backupset.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Settings.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Languagesettings.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Schedule.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Log.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Storageusage.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/ReluserModule.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Backupitem.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/User.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Hint.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Module.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Iprestriction.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Server.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Restoreitem.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Adview.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Language.hbm.xml" />
+        <mapping resource="net/nettape/dal/object/Restore.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

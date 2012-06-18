@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Restore" table="restore" schema="public">
+        <id name="restoreid" type="java.lang.Integer">
+            <column name="restoreid" />
+            <generator class="sequence">
+                <param name="sequence">restore_restoreid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="status" class="net.nettape.dal.object.Status" fetch="select">
+            <column name="statusid" />
+        </many-to-one>
+        <property name="datetime" type="timestamp">
+            <column name="datetime" length="29" />
+        </property>
+        <property name="datetimeended" type="timestamp">
+            <column name="datetimeended" length="29" />
+        </property>
+        <property name="restorepath" type="string">
+            <column name="restorepath" />
+        </property>
+        <property name="overwrite" type="java.lang.Boolean">
+            <column name="overwrite" />
+        </property>
+        <property name="restorepermissions" type="java.lang.Boolean">
+            <column name="restorepermissions" />
+        </property>
+        <property name="ipaddress" type="string">
+            <column name="ipaddress" length="50" />
+        </property>
+        <set name="filters" table="filter" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="restoreid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Filter" />
+        </set>
+        <set name="filters_1" table="filter" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="restoreid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Filter" />
+        </set>
+        <set name="restoreitems" table="restoreitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="restoreid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Restoreitem" />
+        </set>
+        <set name="restoreitems_1" table="restoreitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="restoreid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Restoreitem" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Client" table="client" schema="public">
+        <id name="clientid" type="java.lang.Integer">
+            <column name="clientid" />
+            <generator class="sequence">
+                <param name="sequence">client_clientid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="user" class="net.nettape.dal.object.User" fetch="select">
+            <column name="userid" />
+        </many-to-one>
+        <property name="guid" type="string">
+            <column name="guid" length="50" />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="type" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <set name="backupsets" table="backupset" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="clientid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backupset" />
+        </set>
+        <set name="adviews" table="adview" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="clientid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Adview" />
+        </set>
+        <set name="adviews_1" table="adview" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="clientid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Adview" />
+        </set>
+        <set name="logs" table="log" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="clientid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Log" />
+        </set>
+        <set name="logs_1" table="log" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="clientid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Log" />
+        </set>
+        <set name="backupsets_1" table="backupset" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="clientid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backupset" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,132 @@
+[AdvancedBackupSourceWindow]
+buttonBackUpFilter=Backup filter
+explain=Please select the folders or files you want to backup.
+labelAllFolders=Toate directoarele
+messageBoxOneFile=You must select at least one file or directory.
+title=Backup avansat
+[BackUpFilterWindow]
+comboApplyTo=Aplica-l la
+comboOption1=include files with the above characteristic(s)
+comboOption2=exclude files with the above characteristic(s)
+groupFileNameExtension=Numele extensilor de fisiere
+messageBoxTextIllegalCharacter=You can not use illegal characters.
+messageBoxTextOneDot=dfsdfsdfsddddd
+messageBoxTextPaternEmpty=You must enter at least one pattern.
+messageBoxTextPathEmpty=Please enter a path.
+messageBoxTextPathNotExist=The path does not exist.
+messageBoxTextPatternDuplicate=This pattern already exist in list.
+title=Filtre backup
+[BackUpSourceWindow]
+buttonAdvanced=Detaliat
+title=Backup Source titlu
+[BackupScheduleWindow]
+buttonAfter=dupa
+buttonFriday=Vineri
+buttonMonday=Luni
+buttonOnCompletion=la terminare
+buttonRunSchedule=ruleaza backup pe acest computer
+buttonSaturday=Sambata
+buttonSunday=Duminica
+buttonThursday=Joi
+buttonTuesday=Marti
+buttonWednesday=Miercuri
+groupTime=Timp
+labelBackup=Backup in urmatoarele zile din saptamana
+labelHours=ore
+labelStart=Start1
+labelStop=Stop1
+title=Calendar de Backup
+[BackupSettingsWindow]
+buttonBackupFile=Permisiune de fisiere
+buttonChange=Schimba
+buttonMaskEncryptingKey=Acopera Cheia de criptare
+comboRecycleBin=Pastreaza fisierele pentru
+groupAdvanceSettings=Setari avansate
+groupEncryption=Criptare
+groupLanguage=Limba
+groupRecycleBin=Cos de gunoi
+groupTemporaryFile=Director Temporar
+recycleBinDays=Zile
+textEncryptingKey=Cheie de cripatare
+title=Setari de backup
+[ChangePathWindow]
+title=Schimba directorul
+[FilesWindow]
+comboItems=Fisiere pe pagina
+comboPage=Pagina
+table.Modified=Modificat
+table.Name=Nume
+table.Size=Dimensiune
+table.Type=Tip
+[FilterWindow]
+buttonMatchCase=Potrivire exacta
+comboType=Tip
+ends with=se termina cu
+exact=exacta
+groupPattern=Filtru
+start with=incepe cu
+textPattern=Sablon
+title=Filtru
+[General]
+buttonCancel=Cancel
+buttonOk=OK
+[LanguageWindow]
+languageName=Language name
+title=Select folders and files
+[MainWindow]
+buttonBackup=fa o copie acum
+buttonBackup.Details=Copiaza backupset-urile tale acum. You can create a new backupset if you haven't done already.
+buttonBackupSet=Backup Setari
+buttonBackupSet.Details=Manage you backup set. Select what to backup. Use advanced backup set to choose custom files and folders.aaa
+buttonHelp=Ajutor
+buttonHelp.Details=Look for answers to your questions and a howto guide here.ddd
+buttonReports=Rapoarte
+buttonReports.Details=Backup, restore and error reports. Only available in full backup suite. You can receive reports by email.ttt
+buttonRestore=refacere fisiere salvate
+buttonRestore.Details=Recover your lost files. Select which files to recover. You can also define filter.fff
+buttonSchedule=Calendar
+buttonSchedule.Details=Schedule your backups. Daily, weekly, monthly, yearly. Buy or full backup suite for custom schedules.fgdfg
+buttonSettings=Setari
+buttonSettings.Details=Change the application and backup settings. Features like in-file-changes backup can be switched on or off.sdfsdf
+buttonUserAccount=Cont user
+buttonUserAccount.Details=Setup your user profile including your username and password to login to the backup server.sdfsdfs
+title=Facere si refacere
+[RestoreWindow]
+buttonAlternativeLocation=Locatie alternativa
+buttonChange=Schimba
+buttonDeleteExtraFiles=Sterge fisierele extra
+buttonFilter=Filtru
+buttonOriginalLocation=Locatie originala
+buttonRestoreFile=Refa permisiunea fisierelor
+buttonSearch=Cauta
+buttonShowAllFiles=Arata toate fisierele
+buttonShowFiles=Arata fisierele ca o slujba
+groupRestore=Refa fisierele la
+labelOriginalLocation=Locatie originala
+title=Refacere
+[SearchWindow]
+buttonChange=Modifica
+buttonMatchCase=Potrivire exacta
+buttonSearch=Cauta-ma
+buttonSearchSubFolders=Cauta-ma peste tot
+buttonStop=Oprestete
+comboApplyTo=Aplica la
+comboType=Tip
+textLookIn=Uitate in
+textPattern=Sablon
+title=Cauta-ma bine
+[SelectDirectoryFilterWindow]
+title=Selectare director
+[SettingsWindow]
+title=Application Setings
+[UserProfileWindow]
+buttonChange=Schimba
+buttonSavePassword=Saveaza parola
+groupContact=Contactul
+groupTimeZone=Zona
+groupUserInformation=Informatii utilizator
+textEmail=Emailul
+textLoginName=Nume utilizator
+textName=Nume
+textPassword=Parola
+title=Profil utilizator

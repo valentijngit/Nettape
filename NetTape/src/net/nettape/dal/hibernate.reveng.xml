@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+<table schema="public" name="schedule">
+<primary-key>
+	<generator class="sequence"><param name="sequence">schedule_scheduleid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="restoreitem">
+<primary-key>
+	<generator class="sequence"><param name="sequence">restoreitem_restoreitemid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="module">
+	<primary-key>
+	<generator class="sequence"><param name="sequence">module_moduleid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="user_">
+<primary-key>
+	<generator class="sequence"><param name="sequence">user__userid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="backupsetitem">
+<primary-key>
+	<generator class="sequence"><param name="sequence">backupsetitem_backupsetitemid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="client">
+<primary-key>
+	<generator class="sequence"><param name="sequence">client_clientid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="languagesettings">
+<primary-key>
+	<generator class="sequence"><param name="sequence">languagesettings_languagesettingsid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="filter">
+<primary-key>
+	<generator class="sequence"><param name="sequence">filter_filterid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="criteria">
+<primary-key>
+	<generator class="sequence"><param name="sequence">criteria_criteriaid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="trialmodulesettings">
+<primary-key>
+	<generator class="sequence"><param name="sequence">trialmodulesettings_trialmodulesettingsid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="backupitem">
+<primary-key>
+	<generator class="sequence"><param name="sequence">backupitem_backupitemid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="backupset">
+<primary-key>
+	<generator class="sequence"><param name="sequence">backupset_backupsetid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="settings">
+<primary-key>
+	<generator class="sequence"><param name="sequence">settings_settingsid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="iprestriction"><primary-key>
+	<generator class="sequence"><param name="sequence">iprestriction_iprestrictionid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="restore">
+<primary-key>
+	<generator class="sequence"><param name="sequence">restore_restoreid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="server">
+<primary-key>
+	<generator class="sequence"><param name="sequence">server_serverid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="backup">
+<primary-key>
+	<generator class="sequence"><param name="sequence">backup_backupid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="language">
+<primary-key>
+	<generator class="sequence"><param name="sequence">language_languageid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="contact">
+<primary-key>
+	<generator class="sequence"><param name="sequence">contact_contactid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="adgroup">
+<primary-key>
+	<generator class="sequence"><param name="sequence">adgroup_adgroupid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="advertisement">
+<primary-key>
+	<generator class="sequence"><param name="sequence">advertisement_advertisementid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="adview">
+<primary-key>
+	<generator class="sequence"><param name="sequence">adview_adviewid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="backupcommand">
+<primary-key>
+	<generator class="sequence"><param name="sequence">backupcommand_backupcommandid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="jobsettings">
+<primary-key>
+	<generator class="sequence"><param name="sequence">jobsettings_jobsettingsid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="license">
+<primary-key>
+	<generator class="sequence"><param name="sequence">license_licenseid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="log">
+<primary-key>
+	<generator class="sequence"><param name="sequence">log_logid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="reluser_adgroup">
+<primary-key>
+	<generator class="sequence"><param name="sequence">reluser_adgroup_reluser_adgroupid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="reluser_module">
+<primary-key>
+	<generator class="sequence"><param name="sequence">reluser_module_reluser_moduleid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="retentionschedule">
+<primary-key>
+	<generator class="sequence"><param name="sequence">retentionschedule_retentionscheduleid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="storageusage">
+<primary-key>
+	<generator class="sequence"><param name="sequence">storageusage_storageusageid_seq</param></generator>
+</primary-key>
+</table>
+<table schema="public" name="longname">
+<primary-key>
+	<generator class="sequence"><param name="sequence">longname_nameid_seq</param></generator>
+</primary-key>
+</table>
+</hibernate-reverse-engineering>

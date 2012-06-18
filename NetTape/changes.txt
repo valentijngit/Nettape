@@ -1,0 +1,11 @@
+CHANGES TO NETTAPE DATABASE:
+
+
+backupset:
+
+-Added field 'version' (should be 0 when a new record is created).
+
+
+CHANGES TO WEBADMIN:
+
+- add 1 to Version each time an update is done to a backupset. Insert sets version to 0.
