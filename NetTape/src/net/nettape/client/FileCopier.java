@@ -2,6 +2,7 @@ package net.nettape.client;
 
 import java.io.*;
 import java.nio.file.FileSystems;
+import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
@@ -29,7 +30,7 @@ public class FileCopier {
 	    */
 		java.nio.file.Path srPath = FileSystems.getDefault().getPath(srFile);
 		java.nio.file.Path dtPath = FileSystems.getDefault().getPath(dtFile);
-		srPath.copyTo(dtPath, StandardCopyOption.REPLACE_EXISTING);
+		Files.copy(srPath, dtPath, StandardCopyOption.REPLACE_EXISTING);
 		srPath = null;
 		dtPath = null;
 		

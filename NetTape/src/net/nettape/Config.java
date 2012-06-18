@@ -10,7 +10,7 @@ public class Config {
 	public static String getProperty(String key)
 	{
 		try
-		{
+		{ 
 			Properties configFile = new Properties();
 			configFile.load(Config.class.getResourceAsStream("/nettape.config"));
 			return configFile.getProperty(key);			

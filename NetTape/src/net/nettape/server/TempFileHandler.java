@@ -2,6 +2,7 @@ package net.nettape.server;
 
 import java.io.*;
 import java.nio.file.FileSystems;
+import java.nio.file.Files;
 
 import org.hibernate.Session;
 
@@ -31,7 +32,7 @@ public class TempFileHandler {
 			 */
 			java.nio.file.Path path = FileSystems.getDefault().getPath(this.path);
 			java.nio.file.Path path2 = FileSystems.getDefault().getPath(newName);
-			path.moveTo(path2,REPLACE_EXISTING);
+			Files.move(path, path2, REPLACE_EXISTING);
 			/*
 			FileInputStream in = 
 		            new FileInputStream(this.path);

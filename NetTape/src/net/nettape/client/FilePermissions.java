@@ -1,6 +1,7 @@
 package net.nettape.client;
 
 import java.nio.file.FileSystems;
+import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.attribute.*;
 import java.util.*;
@@ -22,21 +23,21 @@ public class FilePermissions {
 	*/
 	private static PosixFileAttributes GetPosixFileAttributes(java.nio.file.Path path) throws Exception
 	{
-		PosixFileAttributes attributes = java.nio.file.attribute.Attributes.readPosixFileAttributes(path,(LinkOption)null);
+		PosixFileAttributes attributes = Files.getFileAttributeView(path, PosixFileAttributeView.class,(LinkOption)null).readAttributes();
 		return attributes;
 	}
 	private static void SetPosixFileAttributes(java.nio.file.Path path, Permissions permissions) throws Exception
 	{
-		java.nio.file.attribute.Attributes.setPosixFilePermissions(path, permissions.posixFileAttributes.permissions());
+		Files.setPosixFilePermissions(path, permissions.posixFileAttributes.permissions());
 	}
 	private static List<AclEntry> GetAcl(java.nio.file.Path path) throws Exception
 	{
-		List<AclEntry> attributes = java.nio.file.attribute.Attributes.getAcl(path);
+		List<AclEntry> attributes = Files.getFileAttributeView(path, AclFileAttributeView.class).getAcl();
 		return attributes;
 	}
 	private static void SetAcl(java.nio.file.Path path, Permissions permissions) throws Exception
 	{
-		java.nio.file.attribute.Attributes.setAcl(path,permissions.aclList);
+		Files.getFileAttributeView(path, AclFileAttributeView.class).setAcl(permissions.aclList);
 	}
 	public static Boolean GetPermissions(String fileName, Permissions permissions)
 	{
