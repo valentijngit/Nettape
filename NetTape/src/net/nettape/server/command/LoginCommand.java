@@ -54,13 +54,13 @@ public class LoginCommand extends ServerCommand
 	        }
 	        catch(Exception ex)
 	        {
-	        	aUser.setUserid(0);
+	        	aUser.setUserid(-1);
 	        }
 	        
 	        
 	        connection.sendObject(aUser);
 	        
-	        if(aUser.getUserid() != 0)
+	        if(aUser.getUserid() != -1)
 	        {
 	        	connection.dalUser = aUser;
 				Client aClient = (Client)(connection.receiveObject());
@@ -120,14 +120,14 @@ public class LoginCommand extends ServerCommand
 			        	}
 			        	catch(Exception e)
 			        	{
-				        	newClient.setClientid(0);
+				        	newClient.setClientid(-1);
 			        	}
 		        	}
 		        	else
-		        		newClient.setClientid(0);
+		        		newClient.setClientid(-1);
 		        }
 		        connection.sendObject(newClient);
-		        if (newClient.getClientid() != 0)
+		        if (newClient.getClientid() != -1)
 		        {
 		        	connection.Login();
 		        	connection.dalClient = newClient;

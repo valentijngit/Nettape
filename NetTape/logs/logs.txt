@@ -9766,3 +9766,20 @@ org.eclipse.swt.SWTException: Widget is disposed
 	at net.nettape.client.gui.ui.awindow.AbstractL1Window.open(AbstractL1Window.java:78)
 	at net.nettape.client.gui.Main.open(Main.java:115)
 	at net.nettape.client.gui.Main.main(Main.java:183)
+INFO  [15:09:33,274] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:09:33 CEST 2012
+INFO  [15:10:41,536] [net.nettape.client.gui.admin.LoggerSetings.shutDown(LoggerSetings.java:72)] - STOP APPLICATION - Wed Jul 11 15:10:41 CEST 2012
+INFO  [15:19:27,011] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:19:27 CEST 2012
+INFO  [15:19:44,200] [net.nettape.client.gui.admin.LoggerSetings.shutDown(LoggerSetings.java:72)] - STOP APPLICATION - Wed Jul 11 15:19:44 CEST 2012
+INFO  [15:20:42,913] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:20:42 CEST 2012
+INFO  [15:21:19,484] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:21:19 CEST 2012
+INFO  [15:21:56,241] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:21:56 CEST 2012
+INFO  [15:22:13,300] [net.nettape.client.gui.admin.LoggerSetings.shutDown(LoggerSetings.java:72)] - STOP APPLICATION - Wed Jul 11 15:22:13 CEST 2012
+INFO  [15:25:01,574] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:25:01 CEST 2012
+INFO  [15:27:08,897] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:27:08 CEST 2012
+INFO  [15:28:42,695] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:28:42 CEST 2012
+INFO  [15:29:24,647] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:29:24 CEST 2012
+INFO  [15:30:20,554] [net.nettape.client.gui.admin.LoggerSetings.shutDown(LoggerSetings.java:72)] - STOP APPLICATION - Wed Jul 11 15:30:20 CEST 2012
+INFO  [15:31:42,983] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:31:42 CEST 2012
+INFO  [15:38:00,151] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:38:00 CEST 2012
+INFO  [15:39:09,571] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:39:09 CEST 2012
+INFO  [15:42:01,183] [net.nettape.client.gui.admin.LoggerSetings.<init>(LoggerSetings.java:21)] - START APPLICATION - Wed Jul 11 15:42:01 CEST 2012

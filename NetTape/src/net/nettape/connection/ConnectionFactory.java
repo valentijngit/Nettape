@@ -17,7 +17,7 @@ public class ConnectionFactory {
 				return new SecureDHConnection(s, serverConnection, connectionType);
 			}
 			
-		case HTTPCHUNKED:
+		case HTTP:
 			if(secure)
 			{
 				return new SecureDHConnectionHttp(s, uri, serverConnection, connectionType);

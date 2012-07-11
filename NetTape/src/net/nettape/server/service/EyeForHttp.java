@@ -34,7 +34,7 @@ public class EyeForHttp extends Thread
 	
 				Socket s = ssHttp.accept();
 				//start a thread for this socket now
-				HandOfGod handOfGod = new HandOfGod(ConnectionType.HTTPCHUNKED,s,ThreadList.getInstance().List,null);
+				HandOfGod handOfGod = new HandOfGod(ConnectionType.HTTP,s,ThreadList.getInstance().List,null);
 				Thread t = new Thread(handOfGod);
 				t.start();
 				

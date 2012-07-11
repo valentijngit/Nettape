@@ -81,7 +81,7 @@ public class LoginCommand
 				connection.SendCommand(Command.LOGIN);
 				connection.sendObject(connection.dalUser);
 				connection.dalUser = (User)connection.receiveObject();
-				if(connection.dalUser.getUserid() != 0)
+				if(connection.dalUser.getUserid() != -1)
 				{
 					Client aClient = new Client();
 					AppConstants.getInstance();

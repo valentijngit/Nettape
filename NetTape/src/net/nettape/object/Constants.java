@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Constants {
 	
 	public enum ConnectionType {
-		SOCKETS (0), HTTP (1), HTTPCHUNKED (2);
+		SOCKETS (0), HTTP (1);
 		public final int type;
 		ConnectionType(int type)
 		{
