@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Retentionschedule" table="retentionschedule" schema="public">
+        <id name="retentionscheduleid" type="java.lang.Integer">
+            <column name="retentionscheduleid" />
+            <generator class="sequence">
+                <param name="sequence">retentionschedule_retentionscheduleid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="backupset" class="net.nettape.dal.object.Backupset" fetch="select">
+            <column name="backupsetid" not-null="true" />
+        </many-to-one>
+        <property name="datetype" type="java.lang.Integer">
+            <column name="datetype" />
+        </property>
+        <property name="copies" type="java.lang.Integer">
+            <column name="copies" />
+        </property>
+        <property name="daysofweek" type="java.lang.Integer">
+            <column name="daysofweek" />
+        </property>
+        <property name="day" type="java.lang.Integer">
+            <column name="day" />
+        </property>
+        <property name="monthsofyear" type="java.lang.Integer">
+            <column name="monthsofyear" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="13" />
+        </property>
+    </class>
+</hibernate-mapping>

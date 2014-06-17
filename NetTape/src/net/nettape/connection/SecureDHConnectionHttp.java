@@ -365,6 +365,7 @@ public class SecureDHConnectionHttp extends Connection {
 	    int count=0;
 	    OutputStream out = getOutputStream();
 	    sendDataInt((int)length);
+	    // possible problem: this keeps sending data and does not end after length has been sent (ras)
 	    while ( ( count=ras.read(buffer)) > 0) {
 	      out.write(buffer, 0, count);
 	    }
@@ -423,6 +424,9 @@ public class SecureDHConnectionHttp extends Connection {
 	
 	public long receiveFileOnClient(SmartFile smartFile) throws Exception, IOException
 	{
+	//problem could be here that only initial length is sent to client, while it should be of each buffer
+	// the last read could be for 0 bytes, but it would be a read that gets nothing in response and hangs there (although docs say it shouldnt)
+	// so change to the way receiveFileOnServer works (and change SendOnServer appropriately as well)
 		byte[] buffer = new byte[2048];
 		InputStream in = (InputStream)getInputStream();
 		OutputStream os = smartFile.GetOutputStream();

@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Settings" table="settings" schema="public">
+        <id name="settingsid" type="java.lang.Integer">
+            <column name="settingsid" />
+            <generator class="sequence">
+                <param name="sequence">settings_settingsid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="language" class="net.nettape.dal.object.Language" fetch="select">
+            <column name="reportlanguageid" not-null="true" />
+        </many-to-one>
+        <property name="smtpserver" type="string">
+            <column name="smtpserver" length="250" />
+        </property>
+        <property name="smtplogin" type="string">
+            <column name="smtplogin" length="50" />
+        </property>
+        <property name="smtppassword" type="string">
+            <column name="smtppassword" length="50" />
+        </property>
+        <property name="reportsendername" type="string">
+            <column name="reportsendername" length="250" />
+        </property>
+        <property name="reportsenderemail" type="string">
+            <column name="reportsenderemail" length="250" />
+        </property>
+        <property name="sendwelcomeemail" type="java.lang.Boolean">
+            <column name="sendwelcomeemail" />
+        </property>
+        <property name="sendpasswordinemail" type="java.lang.Boolean">
+            <column name="sendpasswordinemail" />
+        </property>
+        <property name="permissionsretention" type="java.lang.Boolean">
+            <column name="permissionsretention" />
+        </property>
+        <property name="movedretention" type="java.lang.Boolean">
+            <column name="movedretention" />
+        </property>
+        <property name="enablefreetrial" type="java.lang.Boolean">
+            <column name="enablefreetrial" />
+        </property>
+        <property name="freetrialquota" type="java.lang.Integer">
+            <column name="freetrialquota" />
+        </property>
+        <property name="ftsuspendafterdays" type="java.lang.Integer">
+            <column name="ftsuspendafterdays" />
+        </property>
+        <property name="ftremoveafterdays" type="java.lang.Integer">
+            <column name="ftremoveafterdays" />
+        </property>
+        <property name="proxytype" type="java.lang.Boolean">
+            <column name="proxytype" />
+        </property>
+        <property name="proxyhost" type="string">
+            <column name="proxyhost" length="250" />
+        </property>
+        <property name="proxyport" type="java.lang.Integer">
+            <column name="proxyport" />
+        </property>
+        <property name="proxyusername" type="string">
+            <column name="proxyusername" length="50" />
+        </property>
+        <property name="proxypassword" type="string">
+            <column name="proxypassword" length="50" />
+        </property>
+        <property name="useproxy" type="java.lang.Boolean">
+            <column name="useproxy" />
+        </property>
+        <property name="usead" type="java.lang.Boolean">
+            <column name="usead" />
+        </property>
+        <property name="addomainname" type="string">
+            <column name="addomainname" length="250" />
+        </property>
+        <property name="addomaincontrollerip" type="string">
+            <column name="addomaincontrollerip" length="50" />
+        </property>
+        <property name="removeuserwhendeletedfromad" type="java.lang.Boolean">
+            <column name="removeuserwhendeletedfromad" />
+        </property>
+        <property name="removeuserwhendisabledinad" type="java.lang.Boolean">
+            <column name="removeuserwhendisabledinad" />
+        </property>
+        <property name="removeuserwhendeletedfromaddays" type="java.lang.Integer">
+            <column name="removeuserwhendeletedfromaddays" />
+        </property>
+        <property name="removeuserwhendeletedinaddays" type="java.lang.Integer">
+            <column name="removeuserwhendeletedinaddays" />
+        </property>
+        <property name="enablereplication" type="java.lang.Boolean">
+            <column name="enablereplication" />
+        </property>
+        <property name="replicationusername" type="string">
+            <column name="replicationusername" length="50" />
+        </property>
+        <property name="replicationpassword" type="string">
+            <column name="replicationpassword" length="50" />
+        </property>
+        <property name="replicationhost" type="string">
+            <column name="replicationhost" length="250" />
+        </property>
+        <property name="replicationport" type="java.lang.Integer">
+            <column name="replicationport" />
+        </property>
+        <property name="infiledeltablocksize" type="java.lang.Integer">
+            <column name="infiledeltablocksize" />
+        </property>
+        <property name="minimumfilesize" type="java.lang.Integer">
+            <column name="minimumfilesize" />
+        </property>
+        <property name="userhome" type="string">
+            <column name="userhome" length="250" />
+        </property>
+        <property name="ftmailboxes" type="java.lang.Integer">
+            <column name="ftmailboxes" />
+        </property>
+        <set name="trialmodulesettingses" table="trialmodulesettings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="settingsid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Trialmodulesettings" />
+        </set>
+        <set name="trialmodulesettingses_1" table="trialmodulesettings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="settingsid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Trialmodulesettings" />
+        </set>
+        <set name="languagesettingses" table="languagesettings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="settingsid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Languagesettings" />
+        </set>
+        <set name="languagesettingses_1" table="languagesettings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="settingsid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Languagesettings" />
+        </set>
+    </class>
+</hibernate-mapping>

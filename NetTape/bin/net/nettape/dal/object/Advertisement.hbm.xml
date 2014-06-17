@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Advertisement" table="advertisement" schema="public">
+        <id name="advertisementid" type="java.lang.Integer">
+            <column name="advertisementid" />
+            <generator class="sequence">
+                <param name="sequence">advertisement_advertisementid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="adgroup" class="net.nettape.dal.object.Adgroup" fetch="select">
+            <column name="adgroupid" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="250" />
+        </property>
+        <property name="text" type="string">
+            <column name="text" />
+        </property>
+        <property name="startdate" type="date">
+            <column name="startdate" length="13" />
+        </property>
+        <property name="popularity" type="java.lang.Integer">
+            <column name="popularity" />
+        </property>
+        <property name="hits" type="java.lang.Long">
+            <column name="hits" />
+        </property>
+        <property name="clicks" type="java.lang.Long">
+            <column name="clicks" />
+        </property>
+        <property name="hitsperday" type="java.lang.Integer">
+            <column name="hitsperday" />
+        </property>
+        <property name="clicksperday" type="java.lang.Integer">
+            <column name="clicksperday" />
+        </property>
+        <property name="time" type="java.lang.Integer">
+            <column name="time" />
+        </property>
+        <property name="order" type="java.lang.Integer">
+            <column name="order" />
+        </property>
+        <property name="gifimage" type="string">
+            <column name="gifimage" length="50" />
+        </property>
+        <property name="flashimage" type="string">
+            <column name="flashimage" length="50" />
+        </property>
+        <property name="target" type="string">
+            <column name="target" length="500" />
+        </property>
+        <set name="adviews" table="adview" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="advertisementid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Adview" />
+        </set>
+        <set name="adviews_1" table="adview" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="advertisementid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Adview" />
+        </set>
+    </class>
+</hibernate-mapping>

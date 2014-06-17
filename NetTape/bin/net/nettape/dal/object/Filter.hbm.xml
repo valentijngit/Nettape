@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Filter" table="filter" schema="public">
+        <id name="filterid" type="java.lang.Integer">
+            <column name="filterid" />
+            <generator class="sequence">
+                <param name="sequence">filter_filterid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="restore" class="net.nettape.dal.object.Restore" fetch="select">
+            <column name="restoreid" />
+        </many-to-one>
+        <many-to-one name="backupset" class="net.nettape.dal.object.Backupset" fetch="select">
+            <column name="backupsetid" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <property name="include" type="java.lang.Boolean">
+            <column name="include" />
+        </property>
+        <property name="toppath" type="string">
+            <column name="toppath" length="250" />
+        </property>
+        <property name="applytofolders" type="java.lang.Boolean">
+            <column name="applytofolders" />
+        </property>
+        <property name="applytofiles" type="java.lang.Boolean">
+            <column name="applytofiles" />
+        </property>
+        <set name="criterias" table="criteria" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="filterid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Criteria" />
+        </set>
+        <set name="criterias_1" table="criteria" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="filterid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Criteria" />
+        </set>
+    </class>
+</hibernate-mapping>

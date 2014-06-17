@@ -22,6 +22,7 @@ public class Http11ChunkedInputStream extends InputStream {
 
         try {
             switch (state) {
+		// possible problem 'probably not: strange that another skipCRLF is called, while the only way that case could be 3 is through state2remaining = 0 and then a double skipCRLF is already done
                 case 3:
                     if (!skipCRLF()) {
                         state = -1;

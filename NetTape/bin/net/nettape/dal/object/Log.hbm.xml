@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Log" table="log" schema="public">
+        <id name="logid" type="java.lang.Integer">
+            <column name="logid" />
+            <generator class="sequence">
+                <param name="sequence">log_logid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="client" class="net.nettape.dal.object.Client" fetch="select">
+            <column name="clientid" />
+        </many-to-one>
+        <property name="datetime" type="timestamp">
+            <column name="datetime" length="29" />
+        </property>
+        <property name="message" type="string">
+            <column name="message" />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="type" />
+        </property>
+        <property name="backupitemid" type="java.lang.Integer">
+            <column name="backupitemid" />
+        </property>
+        <property name="restoreitemid" type="java.lang.Integer">
+            <column name="restoreitemid" />
+        </property>
+        <property name="backupid" type="java.lang.Integer">
+            <column name="backupid" />
+        </property>
+        <property name="restoreid" type="java.lang.Integer">
+            <column name="restoreid" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Backupset" table="backupset" schema="public">
+        <id name="backupsetid" type="java.lang.Integer">
+            <column name="backupsetid" />
+            <generator class="sequence">
+                <param name="sequence">backupset_backupsetid_seq</param>
+            </generator>
+        </id>
+        <version name="version" type="long">
+            <column name="version" not-null="true" />
+        </version>
+        <many-to-one name="client" class="net.nettape.dal.object.Client" fetch="select">
+            <column name="clientid" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="250" />
+        </property>
+        <property name="datecreated" type="timestamp">
+            <column name="datecreated" length="29" />
+        </property>
+        <property name="datedeleted" type="timestamp">
+            <column name="datedeleted" length="29" />
+        </property>
+        <property name="datedeactivated" type="timestamp">
+            <column name="datedeactivated" length="29" />
+        </property>
+        <property name="active" type="java.lang.Boolean">
+            <column name="active" />
+        </property>
+        <property name="deleted" type="java.lang.Boolean">
+            <column name="deleted" />
+        </property>
+        <property name="retention" type="java.lang.Boolean">
+            <column name="retention" />
+        </property>
+        <property name="filepermissions" type="java.lang.Boolean">
+            <column name="filepermissions" />
+        </property>
+        <property name="continuousprotection" type="java.lang.Boolean">
+            <column name="continuousprotection" />
+        </property>
+        <property name="cpinterval" type="java.lang.Integer">
+            <column name="cpinterval" />
+        </property>
+        <property name="type" type="java.lang.Short">
+            <column name="type" />
+        </property>
+        <property name="isdeltas" type="java.lang.Boolean">
+            <column name="isdeltas" />
+        </property>
+        <property name="sort" type="java.lang.Short">
+            <column name="sort" />
+        </property>
+        <property name="infiledeltablocksize" type="java.lang.Integer">
+            <column name="infiledeltablocksize" />
+        </property>
+        <property name="infiledeltamaxsize" type="java.lang.Integer">
+            <column name="infiledeltamaxsize" />
+        </property>
+        <property name="volumeshadowcopy" type="java.lang.Boolean">
+            <column name="volumeshadowcopy" />
+        </property>
+        <property name="offlinebackup" type="java.lang.Boolean">
+            <column name="offlinebackup" />
+        </property>
+        <property name="snapshotcomplete" type="java.lang.Boolean">
+            <column name="snapshotcomplete" />
+        </property>
+        <property name="enableencryption" type="java.lang.Boolean">
+            <column name="enableencryption" />
+        </property>
+        <property name="enablecompression" type="java.lang.Boolean">
+            <column name="enablecompression" />
+        </property>
+        <property name="infiledeltaminsize" type="java.lang.Integer">
+            <column name="infiledeltaminsize" />
+        </property>
+        <set name="retentionschedules" table="retentionschedule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" not-null="true" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Retentionschedule" />
+        </set>
+        <set name="schedules" table="schedule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Schedule" />
+        </set>
+        <set name="backups" table="backup" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backup" />
+        </set>
+        <set name="backups_1" table="backup" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backup" />
+        </set>
+        <set name="schedules_1" table="schedule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Schedule" />
+        </set>
+        <set name="filters" table="filter" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Filter" />
+        </set>
+        <set name="backupcommands" table="backupcommand" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" not-null="true" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backupcommand" />
+        </set>
+        <set name="iprestrictions" table="iprestriction" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Iprestriction" />
+        </set>
+        <set name="backupsetitems" table="backupsetitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backupsetitem" />
+        </set>
+        <set name="backupcommands_1" table="backupcommand" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" not-null="true" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backupcommand" />
+        </set>
+        <set name="iprestrictions_1" table="iprestriction" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Iprestriction" />
+        </set>
+        <set name="filters_1" table="filter" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Filter" />
+        </set>
+        <set name="backupsetitems_1" table="backupsetitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Backupsetitem" />
+        </set>
+        <set name="retentionschedules_1" table="retentionschedule" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupsetid" not-null="true" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Retentionschedule" />
+        </set>
+    </class>
+</hibernate-mapping>

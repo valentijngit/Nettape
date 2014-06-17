@@ -27,6 +27,8 @@ public class Http11ChunkedOutputStream extends OutputStream {
         if (closed())
             throw new IOException("Stream is closed.");
 
+	    // is cache[0] ever filled?
+	    
         cache[cachePos++] = (byte) b;
 
         if (cachePos == cache.length)

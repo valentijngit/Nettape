@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Module" table="module" schema="public">
+        <id name="moduleid" type="java.lang.Integer">
+            <column name="moduleid" />
+            <generator class="sequence">
+                <param name="sequence">module_moduleid_seq</param>
+            </generator>
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <set name="reluserModules" table="reluser_module" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="moduleid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.ReluserModule" />
+        </set>
+        <set name="trialmodulesettingses" table="trialmodulesettings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="moduleid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Trialmodulesettings" />
+        </set>
+        <set name="reluserModules_1" table="reluser_module" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="moduleid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.ReluserModule" />
+        </set>
+        <set name="trialmodulesettingses_1" table="trialmodulesettings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="moduleid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Trialmodulesettings" />
+        </set>
+    </class>
+</hibernate-mapping>

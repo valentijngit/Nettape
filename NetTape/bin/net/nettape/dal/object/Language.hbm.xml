@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Language" table="language" schema="public">
+        <id name="languageid" type="java.lang.Integer">
+            <column name="languageid" />
+            <generator class="sequence">
+                <param name="sequence">language_languageid_seq</param>
+            </generator>
+        </id>
+        <property name="code" type="string">
+            <column name="code" length="2" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <set name="settingses" table="settings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reportlanguageid" not-null="true" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Settings" />
+        </set>
+        <set name="languagesettingses" table="languagesettings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="languageid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Languagesettings" />
+        </set>
+        <set name="languagesettingses_1" table="languagesettings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="languageid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Languagesettings" />
+        </set>
+        <set name="settingses_1" table="settings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reportlanguageid" not-null="true" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Settings" />
+        </set>
+    </class>
+</hibernate-mapping>

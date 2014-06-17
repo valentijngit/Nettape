@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Iprestriction" table="iprestriction" schema="public">
+        <id name="iprestrictionid" type="java.lang.Integer">
+            <column name="iprestrictionid" />
+            <generator class="sequence">
+                <param name="sequence">iprestriction_iprestrictionid_seq</param>
+            </generator>
+        </id>
+        <many-to-one name="backupset" class="net.nettape.dal.object.Backupset" fetch="select">
+            <column name="backupsetid" />
+        </many-to-one>
+        <property name="fromip" type="string">
+            <column name="fromip" length="50" />
+        </property>
+        <property name="toip" type="string">
+            <column name="toip" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

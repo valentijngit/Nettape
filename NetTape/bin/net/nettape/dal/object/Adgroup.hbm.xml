@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Adgroup" table="adgroup" schema="public">
+        <id name="adgroupid" type="java.lang.Integer">
+            <column name="adgroupid" />
+            <generator class="sequence">
+                <param name="sequence">adgroup_adgroupid_seq</param>
+            </generator>
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="50" />
+        </property>
+        <set name="reluserAdgroups" table="reluser_adgroup" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="adgroupid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.ReluserAdgroup" />
+        </set>
+        <set name="reluserAdgroups_1" table="reluser_adgroup" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="adgroupid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.ReluserAdgroup" />
+        </set>
+        <set name="advertisements" table="advertisement" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="adgroupid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Advertisement" />
+        </set>
+        <set name="advertisements_1" table="advertisement" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="adgroupid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Advertisement" />
+        </set>
+    </class>
+</hibernate-mapping>

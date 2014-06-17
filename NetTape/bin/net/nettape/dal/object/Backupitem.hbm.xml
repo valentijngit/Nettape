@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-jan-2012 20:37:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="net.nettape.dal.object.Backupitem" table="backupitem" schema="public">
+        <id name="backupitemid" type="java.lang.Integer">
+            <column name="backupitemid" />
+            <generator class="sequence">
+                <param name="sequence">backupitem_backupitemid_seq</param>
+            </generator>
+        </id>
+        <version name="version" type="java.lang.Integer">
+            <column name="version" />
+        </version>
+        <property name="backupid" type="java.lang.Integer">
+            <column name="backupid" />
+        </property>
+        <property name="backupsetitemid" type="java.lang.Integer">
+            <column name="backupsetitemid" />
+        </property>
+        <property name="path" type="string">
+            <column name="path" />
+        </property>
+        <property name="type" type="java.lang.Short">
+            <column name="type" />
+        </property>
+        <property name="datetime" type="timestamp">
+            <column name="datetime" length="29" />
+        </property>
+        <property name="position" type="java.lang.Long">
+            <column name="position" />
+        </property>
+        <property name="length" type="java.lang.Long">
+            <column name="length" />
+        </property>
+        <property name="isdeltas" type="java.lang.Boolean">
+            <column name="isdeltas" />
+        </property>
+        <property name="root" type="string">
+            <column name="root" length="3" />
+        </property>
+        <property name="statusid" type="java.lang.Integer">
+            <column name="statusid" />
+        </property>
+        <property name="isfolder" type="java.lang.Boolean">
+            <column name="isfolder" />
+        </property>
+        <set name="restoreitems" table="restoreitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupitemid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Restoreitem" />
+        </set>
+        <set name="restoreitems_1" table="restoreitem" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="backupitemid" />
+            </key>
+            <one-to-many class="net.nettape.dal.object.Restoreitem" />
+        </set>
+    </class>
+</hibernate-mapping>
